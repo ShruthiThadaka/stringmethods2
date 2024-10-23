@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //concat
+
+        var a = "hello";
+        var b = "world";
+        var c = a + b;
+        console.log(c)
+
+        var c = a + " " + b;
+        console.log(c)
+
+        var a = "Good" + " " + "morning";
+        console.log(a)
+
+        var a = "Good";
+        var b = a + " " + "Afternoon";
+        console.log(b)
+        console.log(a.concat(" ", "Afternoon"))
+
+        var a = "Good";
+        var b = "evening";
+        // console.log(a.concat(" " b))Uncaught SyntaxError: missing ) after argument list
+        console.log(a.concat(" ",b))
+
+        var obj = {
+            fname: "shruthi",
+            lname: "thadaka"
+        }
+        console.log(obj.lname.concat(" ", obj.fname))
+
+        //includes    -   Gives output as either true or false based on the given string in the method
+
+        var a = "hello";
+        console.log(a.includes("l"))    //As "l" is present in the string the output is true
+
+        console.log(a.includes("w"))    //As there is no "w" the output will be false
+
+        var b = a.includes("h")
+        console.log(b)
+
+        var a = "Hello World".includes(" ")           //spaces are also considered so the output is true
+        console.log(a)
+
+        //slice
+
+        var a = "Hello World!";
+        var b = a.slice(6,12)              
+        console.log(b)                  
+        console.log(a.slice(-1))            //output is from -1 to end of the string
+        console.log(a.slice(-1,-5))         //-5 comes before -1, the parser can only see forward direction therefore the output is none
+        console.log(a.slice(-6,-1))
+        console.log(a.slice(-6,))
+        console.log(a.slice(4,-1))         //the ooutput is from the index 4 to last index
+        console.log(a.slice(4,-3))         //as -3 is infront of 4 it can see -3 so the output is o wor
+        console.log(a.slice(6,-6))         //6 and -6 are at the same position the output is none
+        console.log(a.slice(0,))
+
+        //split
+
+        var a = "How are you?";
+        console.log(a.split(" "))          //splits the string by using , where the is " "
+
+        var a = "Hi,how are you?";
+        var b = a.split(",")               //splits string where there is ,
+        var c = b.join(" ")                //joining hi and how are you using space so that both the strings combine 
+        var d = c.split(" ")               //splitting where there is space(" ")
+        console.log(b,c,d)
+
+        var a = "id=12&class=10";
+        var b = a.split("=")
+        console.log(b)
+        var c = b.join(" ")
+        console.log(c)
+        var d = c.split("&")
+        console.log(d)
+        var e = d.join(" ")
+        console.log(e)
+        console.log(e.split(" "))
+
+        var a = "fname:hello,lname:world,spcl:!";
+        var b = a.split(",")
+        console.log(b)
+        var c = b.join(" ")
+        console.log(c)
+        var d = c.split(":")
+        console.log(d)
+        var e = d.join(" ")
+        console.log(e)
+        console.log(e.split(" "))
+
+        var a = "hello world";
+        console.log(a.split("a"))
+
+        console.log(a.split("h"))
+
+        console.log(a.split())
+
+        var a = "I'm dng great";
+        var b = a.split("'")
+        console.log(b)
+        console.log(b.join(" ").split(" "))
+
+        var a = "asdf@gmail.com";
+        var b = a.split("@").join(" ")
+        console.log(b)
+        console.log(b.split(".").join(" ").split(" "))
+
+        var a = "20W91A05M6";
+        var b = a.split("W").join(" ").split("M").join(" ").split("A").join(" ").split(" ")
+        console.log(b)
+
+        //toString
+
+        var a = 123;
+        console.log(typeof a.toString())
+ 
+    </script>
+</body>
+
+</html>
